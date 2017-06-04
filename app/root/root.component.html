@@ -1,0 +1,35 @@
+
+
+<div class="w3-content w3-display-container" align="center">
+  <img class="mySlides" src="images/product1.png">
+  <img class="mySlides" src="images/product2.png">
+  <img class="mySlides" src="images/product3.png">
+  <img class="mySlides" src="images/product4.png">
+
+  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)" top="-700px" >&#10094;</a>
+  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)"  top="-700px" margin="200px ">&#10095;</a>
+</div>
+   
+   <div id="TextHomepage">
+    <p>Scandipedia.com is an information based database pertaining to mid-century furniture design. This website is an extensive encyclopedia that focuses on 20th Century Furniture designed for the Mid-Century Modern Furniture enthusiast, interior designer, dealer, picker, collector and anyone else who shares our passion for this timeless well-made design.  Scandipedia.com is a one of a kind source which provides the most accurate information of MCM designers, manufactures and articles on the Internet today.</p>
+    </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
